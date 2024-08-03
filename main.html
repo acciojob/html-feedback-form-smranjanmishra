@@ -3,11 +3,73 @@
 <html>
 
 <head>
+	<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin: 15px 0 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="url"], input[type="color"], input[type="range"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
 	<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 	<!-- the entire body must be written by student -->
+	<form action="#" method="post">
+        <h1>Feedback Form</h1>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" minlength="3" maxlength="50" required>
+        
+        <label for="portfolio">Portfolio</label>
+        <input type="url" id="portfolio" name="portfolio" required>
+        
+        <label for="favColor">Favorite Color</label>
+        <input type="color" id="favColor" name="favColor">
+        
+        <label for="likeness">Likeness</label>
+        <input type="range" id="likeness" name="likeness" min="1" max="100">
+        
+        <input type="submit" value="Submit">
+    </form>
     <script type="text/javascript" src="./script.js">
 </script>
 
